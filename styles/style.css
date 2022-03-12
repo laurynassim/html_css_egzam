@@ -1,3 +1,14 @@
+:root {
+  --card_line1_a: #ff8039;
+  --card_line1_b: #777777;
+  --card_line2: #111111;
+  --card_line3: #a3a3a3;
+  --footer_headings: #5f5f5f;
+  --footer_a: #aaaaaa;
+  --footer_icons: #999999;
+  --card_box: #eeeeee;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,6 +19,13 @@ body {
 }
 main img {
   max-width: 100%;
+}
+.img_movable {
+  width: 150px;
+  height: auto;
+}
+.footer_icons i {
+  color: var(--footer_icons);
 }
 .row {
   display: flex;
@@ -26,4 +44,46 @@ main img {
   height: auto;
   padding: 2rem;
   margin-top: 2rem;
+}
+.companies {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1rem;
+}
+.companies img {
+  padding: 1rem;
+  align-self: baseline;
+}
+
+.card {
+  max-width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+.card_box > div,
+.ETH {
+  display: flex;
+  justify-content: space-between;
+}
+.card_box {
+  background-color: var(--card_box);
+  margin-top: 2px;
+  padding: 1rem;
+}
+.card_box_line1 p:nth-child(odd) {
+  color: var(--card_line1_a);
+}
+.card_box_line1 p:nth-child(even) {
+  color: var(--card_line1_b);
+}
+.card_box_line2 {
+  color: var(--card_line2);
+  font-size: x-large;
+}
+.card_box_line3 {
+  color: var(--card_line3);
 }
