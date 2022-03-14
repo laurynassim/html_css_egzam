@@ -55,7 +55,7 @@ main img {
 
 .banner {
   width: 100%;
-  background-image: url(/assets/assets/background.svg);
+  background-image: url(../assets/assets/background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
