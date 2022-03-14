@@ -3,10 +3,12 @@
   --card_line1_b: #777777;
   --card_line2: #111111;
   --card_line3: #a3a3a3;
-  --footer_headings: #5f5f5f;
+  --footer_ul: #5f5f5f;
   --footer_a: #aaaaaa;
   --footer_icons: #999999;
   --card_box: #eeeeee;
+  --row_opening: #ff52a5;
+  --row_p: #555555;
 }
 
 * {
@@ -24,6 +26,10 @@ main img {
   width: 150px;
   height: auto;
 }
+.img_responsive {
+  width: 300px;
+}
+
 .footer_icons i {
   color: var(--footer_icons);
 }
@@ -31,11 +37,22 @@ main img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5rem;
 }
+
 .column {
   display: block;
   align-items: center;
+  margin-right: 2rem;
 }
+.column > p:nth-child(1) {
+  color: var(--row_opening);
+  font-weight: 600;
+}
+.column > p:nth-child(2) {
+  color: var(--row_p);
+}
+
 .banner {
   width: 100%;
   background-image: url(/assets/assets/background.svg);
@@ -50,7 +67,7 @@ main img {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 1rem;
+  margin: 3rem 0;
 }
 .companies img {
   padding: 1rem;
@@ -62,7 +79,7 @@ main img {
   height: auto;
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
+  margin: 1rem 0.5rem;
 }
 .card_box > div,
 .ETH {
@@ -82,8 +99,79 @@ main img {
 }
 .card_box_line2 {
   color: var(--card_line2);
-  font-size: x-large;
+  font-weight: 600;
 }
 .card_box_line3 {
   color: var(--card_line3);
+}
+footer ul {
+  color: var(--footer_ul);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+footer a {
+  color: var(--footer_a);
+  text-decoration: none;
+}
+footer li {
+  list-style-type: none;
+  margin-top: 1rem;
+}
+
+.footer_c {
+  align-items: center;
+  color: var(--footer_icons);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+button {
+  border: solid 3px red;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 100%;
+  font-size: large;
+  background-color: white;
+  font-weight: 500;
+}
+button:hover {
+  background-color: red;
+  color: white;
+}
+.span_underline {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer_listing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .footer_listing_box {
+    min-width: 50%;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .wrapper,
+  .footer_listing,
+  .row,
+  .companies {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .companies {
+    flex-wrap: wrap;
+  }
+  .flex_start {
+    justify-content: flex-start;
+  }
+  .img_responsive {
+    width: 500px;
+    height: auto;
+  }
+  .column h1 {
+    font-size: 5rem;
+  }
 }
