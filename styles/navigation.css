@@ -51,6 +51,10 @@ nav img {
   .topnav a.icon {
     float: right;
     display: block;
+    position: absolute;
+    font-size: 23px;
+    top:0.5rem;
+    right: 1rem;
   }
 }
 
